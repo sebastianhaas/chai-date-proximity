@@ -12,6 +12,9 @@ module.exports = function(chai, _) {
    * @api public
    */
   Assertion.addMethod('closeToDate', function(otherDate, nUnits, units) {
+    if (! units)
+      units = 'seconds';
+
     var start = moment(otherDate).subtract(nUnits, units).toDate();
     var end = moment(otherDate).add(nUnits, units).toDate();
     var time = this._obj;
