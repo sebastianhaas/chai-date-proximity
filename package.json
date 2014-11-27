@@ -1,0 +1,37 @@
+{
+  "name": "chai-date-proximity",
+  "version": "0.0.1",
+  "description": "Date comparison assertions for the Chai assertion library",
+  "main": "./index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "keywords": [
+    "test",
+    "assertion",
+    "assert",
+    "testing",
+    "chai",
+    "date"
+  ],
+  "author": {
+    "name": "James Pike",
+    "email": "github@chilon.net",
+    "url": "https://chilon.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chilon-net/chai-date-proximity"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^1.10.0",
+    "moment": "^2.8.4"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
+}
