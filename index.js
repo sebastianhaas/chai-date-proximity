@@ -15,14 +15,17 @@ module.exports = function(chai, _) {
     if (! units)
       units = 'seconds';
 
+    var date = this._obj;
+    if (date.toDate)
+      date = date.toDate();
+
     var start = moment(otherDate).subtract(nUnits, units).toDate();
     var end = moment(otherDate).add(nUnits, units).toDate();
-    var time = this._obj;
 
     this.assert(
-      start <= time && time <= end,
-      'expected ' + pp(this._obj) + ' to be between ' + pp(start) + ' and ' + pp(end),
-      'expected ' + pp(this._obj) + ' to not be between ' + pp(start) + ' and ' + pp(end)
+      start <= date && date <= end,
+      'expected ' + pp(date) + ' to be between ' + pp(start) + ' and ' + pp(end),
+      'expected ' + pp(date) + ' to not be between ' + pp(start) + ' and ' + pp(end)
     );
   });
 };
