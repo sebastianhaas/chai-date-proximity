@@ -19,9 +19,10 @@ Use the assertions with chai's `expect` or `should` assertions.
 Asserts that the given date is today
 
 ```javascript
-var date1 = new Date(2014, 3, 1, 13, 30, 6, 7)
+var date1 = new Date(2014, 3, 1, 13, 30, 10)
 var date2 = new Date(2014, 3, 1, 13, 30, 40)
-date1.should.be.closeToDate(date2, 44, 'seconds')
+date1.should.be.closeToDate(date2, 30, 'seconds')
+date1.should.not.be.closeToDate(date2, 20, 'seconds')
 ```
 ## Authors [James Pike][0]
 
