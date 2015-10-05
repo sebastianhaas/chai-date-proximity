@@ -6,7 +6,13 @@ a date proximity assertion.
 ## Installation
 
 ```bash
-$ npm install chai-date
+$ npm install chai-date-proximity
+```
+
+For node, tell chai to use chai-dat-proximity:
+```javascript
+var chai = require('chai');
+chai.use(require('chai-date-proximity'));
 ```
 
 ## Usage
